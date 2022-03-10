@@ -34,6 +34,7 @@ const serveFile = async (filePath, contentType, response) => {
     }
 }
 
+
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method);
     myEmitter.emit('log', `${req.url}\t${req.method}`, 'reqLog.txt');
@@ -64,6 +65,7 @@ const server = http.createServer((req, res) => {
         default:
             contentType = 'text/html';
     }
+
 
     let filePath =
         contentType === 'text/html' && req.url === '/'
@@ -96,4 +98,5 @@ const server = http.createServer((req, res) => {
         }
     }
 });
+
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
