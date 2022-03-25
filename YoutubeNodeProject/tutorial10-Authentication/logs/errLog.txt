@@ -1,0 +1,1 @@
+20220315	12:18:00	71697c56-3f64-4fe2-977a-8fe88810b260	Error: Not allowed by CORS
